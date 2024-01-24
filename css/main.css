@@ -1,3 +1,113 @@
-window#appTemplate { /* Rename appTemplate to the ID of the app */
-  color: #f0f;
+#OpenWith {
+  display: flex;
+  flex-direction: column;
+}
+
+#OpenWith * {
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+
+#OpenWith div.body {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 0;
+}
+
+#OpenWith div.body div.bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  margin-top: auto;
+  padding: 0 10px;
+  background-color: var(--button-bg);
+  border-top: var(--win-border);
+}
+
+#OpenWith div.body div.bottom > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#OpenWith div.body div.bottom button {
+  min-width: unset;
+}
+
+#OpenWith div.body div.top {
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#OpenWith div.body div.top div.handlers {
+  max-height: calc(100% - 45px);
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#OpenWith div.body div.top div.handlers button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 8px 15px;
+  text-align: left;
+}
+
+#OpenWith div.body div.top div.handlers button img {
+  height: 32px;
+}
+
+#OpenWith div.body div.top div.handlers button p.name {
+  font-weight: bold;
+}
+
+#OpenWith div.body div.top div.handlers button p.description {
+  opacity: 0.5;
+}
+
+#OpenWith div.body div.top div.handlers button.selected {
+  background-color: var(--accent-transparent);
+}
+
+#OpenWith div.body div.top div.header h1 {
+  font-size: 20px;
+  text-overflow: ellipsis;
+}
+
+#OpenWith div.body div.top div.header p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+}
+#OpenWith div.body div.top div.header p span {
+  opacity: 0.5;
+}
+
+#OpenWith div.body div.top div.header p img {
+  height: 18px;
+}
+
+#OpenWith div.body div.top div.handlers div.no-results {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0.5;
+  padding: 20px 10px;
+  border-top: var(--button-hover-bg) 1px solid;
+}
+#OpenWith div.body div.top div.handlers div.no-results button {
+  padding: 0;
 }

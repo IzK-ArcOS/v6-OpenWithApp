@@ -1,9 +1,31 @@
 <script lang="ts">
-  import { App } from "$types/app";
+  import { DefaultMimeIcon } from "$ts/images/mime";
+  import { getMimeIcon } from "$ts/server/fs/mime";
+  import { pathToFriendlyPath } from "$ts/server/fs/util";
+  import Bottom from "./Components/Bottom.svelte";
+  import Handlers from "./Components/Handlers.svelte";
   import "./css/main.css";
+  import { Runtime } from "./ts/runtime";
 
-  export let app: App;
+  export let runtime: Runtime;
+
+  const { File } = runtime;
+
+  let icon = DefaultMimeIcon;
+
+  File.subscribe((v) => (icon = getMimeIcon($File.filename)));
 </script>
 
-<h1>Hello, World!</h1>
-<p>Working! App {app.metadata.name}, version {app.metadata.version}.</p>
+{#if $File}
+  <div class="top">
+    <div class="header">
+      <h1>Select an item to open {$File.filename}</h1>
+      <p>
+        <img src={icon} alt="" />
+        <span>Home/{pathToFriendlyPath($File.scopedPath)} </span>
+      </p>
+    </div>
+    <Handlers {runtime} />
+  </div>
+  <Bottom {runtime} />
+{/if}
