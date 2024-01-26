@@ -13,7 +13,7 @@
 
   let icon = DefaultMimeIcon;
 
-  File.subscribe((v) => (icon = getMimeIcon($File.filename)));
+  File.subscribe((v) => v && (icon = getMimeIcon(v.filename)));
 </script>
 
 {#if $File}
