@@ -9,7 +9,9 @@ export const OpenWith: App = {
     description: "Allows you to choose with what to open a file",
     author: "The ArcOS Team",
     version: "3.0.0",
-    icon: ComponentIcon
+    icon: ComponentIcon,
+    appGroup: "internal",
+    hidden: true
   },
   runtime: Runtime,
   content: AppSvelte,
