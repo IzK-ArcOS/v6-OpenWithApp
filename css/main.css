@@ -59,6 +59,11 @@
   gap: 15px;
   padding: 8px 15px;
   text-align: left;
+  background-color: transparent;
+}
+
+#OpenWith div.body div.top div.handlers button:hover {
+  background-color: var(--button-glass-bg);
 }
 
 #OpenWith div.body div.top div.handlers button img {
