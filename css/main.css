@@ -45,12 +45,10 @@
 }
 
 #OpenWith div.body div.top div.handlers {
-  max-height: calc(100% - 45px);
+  height: 350px;
+  max-height: 350px;
   flex-grow: 1;
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
 #OpenWith div.body div.top div.handlers button {
@@ -60,6 +58,8 @@
   padding: 8px 15px;
   text-align: left;
   background-color: transparent;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 #OpenWith div.body div.top div.handlers button:hover {
