@@ -24,8 +24,7 @@ export class Runtime extends AppRuntime {
     this.File.set(file);
     this.compatibles.set(compatibles);
 
-    if (!compatibles.length)
-      this.showAll.set(true);
+    if (!compatibles.length) this.showAll.set(true);
   }
 
   public Go(handler?: FileHandler) {

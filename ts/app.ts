@@ -11,7 +11,7 @@ export const OpenWith: App = {
     version: "3.0.0",
     icon: ComponentIcon,
     appGroup: "internal",
-    hidden: true
+    hidden: true,
   },
   runtime: Runtime,
   content: AppSvelte,
@@ -25,13 +25,13 @@ export const OpenWith: App = {
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: false,
   },
   controls: {
     minimize: false,
     maximize: false,
-    close: true
+    close: true,
   },
   isOverlay: true,
-  glass: false
-}
+  glass: false,
+};

@@ -16,9 +16,7 @@
   {#if !$showAll && !$compatibles.length}
     <div class="no-results">
       <p>Couldn't find any compatible handlers!</p>
-      <button class="link show-all" on:click={() => ($showAll = true)}>
-        Show All
-      </button>
+      <button class="link show-all" on:click={() => ($showAll = true)}> Show All </button>
     </div>
   {/if}
 </div>
