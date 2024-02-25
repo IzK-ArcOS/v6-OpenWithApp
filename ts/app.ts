@@ -1,3 +1,4 @@
+import { SafeMode } from "$state/Desktop/ts/store";
 import { ComponentIcon } from "$ts/images/general";
 import { App } from "$types/app";
 import AppSvelte from "../App.svelte";
@@ -34,4 +35,5 @@ export const OpenWith: App = {
   },
   isOverlay: true,
   glass: false,
+  loadCondition: () => !SafeMode.get(),
 };
