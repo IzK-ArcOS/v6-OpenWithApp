@@ -16,7 +16,11 @@ export class Runtime extends AppRuntime {
 
     const args = process.args;
 
-    if (!args.length || !args[0] || typeof args[0] !== "object") return this.closeApp();
+    if (!args.length || !args[0] || typeof args[0] !== "object") {
+      this.closeApp();
+
+      return;
+    }
 
     const file = args[0] as PartialArcFile;
     const compatibles = getCompatibleHandlers(file.scopedPath, false);

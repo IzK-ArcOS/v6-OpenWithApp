@@ -2,6 +2,7 @@
   import { DefaultMimeIcon } from "$ts/images/mime";
   import { getMimeIcon } from "$ts/server/fs/mime";
   import { pathToFriendlyPath } from "$ts/server/fs/util";
+  import { onMount } from "svelte";
   import Bottom from "./Components/Bottom.svelte";
   import Handlers from "./Components/Handlers.svelte";
   import "./css/main.css";
@@ -13,7 +14,9 @@
 
   let icon = DefaultMimeIcon;
 
-  File.subscribe((v) => v && (icon = getMimeIcon(v.filename)));
+  onMount(() => {
+    File.subscribe((v) => v && (icon = getMimeIcon(v.filename)));
+  });
 </script>
 
 {#if $File}
