@@ -34,6 +34,6 @@ export const OpenWith: App = {
     close: true,
   },
   isOverlay: true,
-  glass: false,
+  glass: true,
   loadCondition: () => !SafeMode.get(),
 };

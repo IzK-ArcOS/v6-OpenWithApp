@@ -14,6 +14,7 @@
   flex-grow: 1;
   flex-direction: column;
   padding: 0;
+  background-color: var(--win-bg);
 }
 
 #OpenWith div.body div.bottom {
@@ -34,6 +35,11 @@
 
 #OpenWith div.body div.bottom button {
   min-width: unset;
+  height: 30px;
+}
+
+#OpenWith div.body div.bottom button:disabled {
+  opacity: 0.2 !important;
 }
 
 #OpenWith div.body div.top {
@@ -113,6 +119,7 @@
   padding: 20px 10px;
   border-top: var(--button-hover-bg) 1px solid;
 }
+
 #OpenWith div.body div.top div.handlers div.no-results button {
   padding: 0 10px;
   width: fit-content;
