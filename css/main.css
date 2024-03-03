@@ -109,10 +109,11 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  opacity: 0.5;
+  opacity: 0.7;
   padding: 20px 10px;
   border-top: var(--button-hover-bg) 1px solid;
 }
 #OpenWith div.body div.top div.handlers div.no-results button {
-  padding: 0;
+  padding: 0 10px;
+  width: fit-content;
 }
