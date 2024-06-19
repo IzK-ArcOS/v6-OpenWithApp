@@ -25,7 +25,7 @@
       <h1>Select an item to open {$File.filename}</h1>
       <p>
         <img src={icon} alt="" />
-        <span>Home/{pathToFriendlyPath($File.scopedPath)} </span>
+        <span>{pathToFriendlyPath($File.scopedPath)} </span>
       </p>
     </div>
     <Handlers {runtime} />
