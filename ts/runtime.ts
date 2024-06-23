@@ -38,6 +38,6 @@ export class Runtime extends AppRuntime {
 
     fileHandler.handler(this.File.get());
 
-    return this.closeApp();
+    return this.closeApp(false);
   }
 }
